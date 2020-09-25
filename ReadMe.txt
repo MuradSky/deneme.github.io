@@ -23,6 +23,7 @@ Project Render and Functions
 6) Projede sadece express.js ve hbs(handleBars) kullanıldı
 
 Biraz kendimden açılama.
+0) deneme 2 de vermiş olduğunuz icon-fan-big kullandım
 1) css selector adlandırmada biraz değşiklik yaptım, buttonlar için css BEM metodoloji kullandım
 2) örnekdeki buttons yapısını değiştirdim, onclick fonksiyonlar sildim ve ranklendirmalerini statusuna göre yaptım,hangi buttona tıklanırsa ona active class akleniyor diğerlerinden kaldırılyor
 3) public'deki SVG.js, .js dosyalarını bir dosyada yazmaktan vaz geçtim ve ES6'nın sunduğu module js kullandım(dosyaları modullere ayırdım) 

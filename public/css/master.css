@@ -1,0 +1,82 @@
+/***************************************************************************
+* TASK SVG trials - Common Style Sheet - Version 0.1.0
+*
+* Copyright 2020 (c) TASK Limited. All Rights Reserved.
+//*************************************************************************/
+
+html, body {
+    height: 100%; margin: 0;}
+body {
+	color:#000; background-color:#fff;
+    font:normal 12px Arial,Helvetica,sans-serif;}
+#lay-wrapper {
+    width:100%; height:100%;}
+    
+.page-header {
+    width:100%; height: 42px; display:flex; justify-content: space-evenly; align-items: center;
+    font-size: 16px; color: #000; background-color: #f0e68c;}
+.page-header span {
+    font-weight: bold;}
+
+
+/* Naming css selectors by BEM */
+.btns {
+    width: 110px; height: 34px; border:0; border-radius:4px; padding: 4px 0 0 0;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;}
+.btns_first{
+    background-color: #ccc;
+}
+.btns_second{
+    background-color:#09f53c;
+}
+.btns_last{
+    background-color: #000000;
+}
+.btns:hover {
+    opacity: .8;}
+
+/* Naming css selectors by BEM */
+
+.grid-container {
+    box-sizing: border-box;
+    display: grid; width: 99%; height: calc(100% - 48px);
+    margin: 4px 0 0 4px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 7px 5px; place-items: stretch stretch; place-content: stretch stretch;}
+.grid-picture {
+    grid-column: 2/6;
+    grid-row: 2/8;
+    background-color: lightgoldenrodyellow;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}
+#fan{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    bottom: 11%;}
+
+
+.active{
+    transform: scale(1.05);}
+
+    
+@media screen and (max-width: 800px){
+    #fan{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        bottom: 21%;}
+} 
+@media screen and (max-width: 414px){
+    .page-header {
+    font-size: 14px;}
+    .btns {
+        width: 80px; height: 30px;}
+}
+/* ---------------------------------------------------------------------- */

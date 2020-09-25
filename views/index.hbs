@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Copyright (c) 2020 TASK Limited All Rights Reserved">
+    <meta charset='utf-8'>
+    {{!-- Dynamic Render Title from node.js--}}
+    <title>{{title}}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {{!-- Dynamic Render Styles from node.js--}}
+    <link rel="stylesheet" href={{style}}>
+</head>
+<body>
+    <div id='lay-wrapper'>
+        {{!-- Render hbs Component Buttons --}}
+        {{> buttons}}
+        {{!-- Render hbs Component SvgContainer --}}
+        {{> svgcontainer}}
+    </div>
+    {{!-- Dynamic Render Script from node.js--}}
+    <script src={{script}} type="module"></script>
+</body>
+</html>

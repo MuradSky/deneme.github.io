@@ -23,26 +23,28 @@ const btnsListener = (btns, fan, animation) => {
         item.addEventListener('click', (e, i) => {
             headerBtns.forEach(item => {item.classList.remove('active')})
             item.classList.add('active');
-            let btnIndex = e.target.dataset.i
-            if(btnIndex === "0") {
-                // if there was a click on the index 0
-                fanSvg.style.fill ="#ccc" 
-                animateTransform.endElement();
-                btnSwitch = false;
-            }
-            if(btnIndex === "1") {
-                // if there was a click on the index 1
-                fanSvg.style.fill ="#09f53c";
-                btnSwitch = true;
-                animateTransform.endElement();
-            }
-            if(btnIndex === "2") {
-                // if there was a click on the index 3
-                if(btnSwitch) {
-                    // if btnSwitch === true
-                    fanSvg.style.fill ="#000"
-                    animateTransform.beginElement();
-                }
+            //convert string dataset to number    
+            let btnIndex = +e.target.dataset.i
+
+            switch(btnIndex) {
+                case 0 :
+                    fanSvg.style.fill ="#ccc" 
+                    animateTransform.endElement();
+                    btnSwitch = false;
+                    break;
+                case 1 : 
+                    fanSvg.style.fill ="#09f53c";
+                    btnSwitch = true;
+                    animateTransform.endElement();
+                    break;
+                case 2 :
+                    if (btnSwitch) {
+                        fanSvg.style.fill ="#000"
+                        animateTransform.beginElement();
+                    } 
+                    break;
+                default :
+                    break;
             }
         })
     })
